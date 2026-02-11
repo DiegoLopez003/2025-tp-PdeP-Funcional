@@ -1,0 +1,79 @@
+Ejercicio 2a:
+
+ghci> estaEnBuenEstado peugeot
+False
+ghci> estaEnBuenEstado ("Lamborghini", "Diablo", (4, 7), 73, 2 , ["Lambo", "La bestia"])
+True
+ghci> estaEnBuenEstado ("Fiat", "600", (27, 33), 44, 2 , ["La Bocha", "La bolita", "Fitito"])
+False
+ghci> estaEnBuenEstado ("Ferrari", "F50", (50,30), 65, 15, ["La nave", "El fierro", "Ferrucho"])
+True
+ghci> estaEnBuenEstado ("Ferrari", "F50", (50,45), 65, 15, ["La nave", "El fierro", "Ferrucho"])
+False
+ghci> estaEnBuenEstado ("Ferrari", "F50", (70, 30), 65, 15, ["La nave", "El fierro", "Ferrucho"])
+False
+
+Ejercicio 2b:
+
+ghci> noDaMas ("Ferrari", "F50", (20, 90), 65, 0, ["La nave", "El fierro", "Ferrucho"])
+True  
+ghci> noDaMas ("Ferrari", "F50", (90, 20), 65, 0, ["La nave", "El fierro", "Ferrucho"])
+False 
+ghci> noDaMas ("Lamborghini", "Diablo", (90, 20), 73, 0 , ["Lambo", "La bestia"])
+True  
+ghci> noDaMas lamborghini
+False 
+
+Ejercicio 2c:
+
+ghci> esChiche lamborghini
+True  
+ghci> esChiche ("Lamborghini", "Diablo", (90, 20), 73, 0 , ["Lambo", "La bestia"])
+False 
+ghci> esChiche ("Ferrari", "F50", (20, 90), 65, 0, ["La nave", "El fierro", "Ferrucho"])
+False 
+ghci> esChiche ferrari
+
+Ejercicio 2d:
+
+ghci> esJoya peugeot
+True  
+ghci> esJoya ferrari
+False 
+
+Ejercicio 2g:
+
+ghci> riesgo fiat
+237.6 
+ghci> riesgo lamborghini
+29.2  
+ghci> 
+
+
+Ejer 5:
+
+{-
+
+[atravesarCurva curvaPeligrosa, atravesarTramoRecto tramoRectoClassic, atravesarZigZag zigZagLoco, atravesarTramoRulo ruloClasico]
+
+lamborghini' :: Auto
+lamborghini' = ("Lamborghini", "Diablo", (4, 7), 73, 2, ["Lambo", "La bestia"])
+
+
+--aplico atravesarCurva curvaPeligrosa a lamborghini'
+-- Resultado = (ruedas, chasis) = (15, 7) velMax = 73 tiempo = 8.2191179
+
+--aplico atravesarTrammoRecto tramoRectoClassic a lamborghini'
+-- Resultado = (ruedas, chasis) = (15, 14.15) velMax = 73 tiempo = 18.013638
+
+
+--aplico atravesarZigZag zigZagLoco a lamborghini'
+-- Resultado = (ruedas, chasis) = (51.5, 19.15) velMax = 73 tiempo = 33.013638
+
+--aplico atravesarTrammoRulo ruloClasico a lamborghini'
+-- Resultado = (ruedas, chasis) = (71, 18.15) velMax = 73 tiempo = 33.90
+
+-- Aca el chasis siempre esta < 20 por lo tanto siempre va a aplicar los tramos.
+
+-}
+
